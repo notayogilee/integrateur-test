@@ -23,11 +23,10 @@ $(function () {
 
 $(document).ready(function () {
     // slider
-    // let slideWrapper = $(".slider-section__slider selected");
+    // let slideWrapper = $("[data-slider]");
 
     $('.selected').slick({
-        infinite: true,
-        speed: 500,
+        infinite: false,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
