@@ -1,0 +1,36 @@
+body{
+    font-family: $body-font-familly;
+    background: $background-color;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.text-emphasis{
+  font-weight: 900;
+  color:$emphasis;
+}
+
+section{
+    padding:15px;
+    border-bottom:1px solid;
+}
+// Structure
+.site-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mainContent{
+  padding: 100px 15px 0;
+}
+
+//  Tools
+.clearfix{
+  clear: both;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
