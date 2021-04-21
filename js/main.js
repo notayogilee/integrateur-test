@@ -26,14 +26,24 @@ $(document).ready(function () {
     // let slideWrapper = $("[data-slider]");
 
     $('.selected').slick({
-        infinite: false,
-        fade: true,
+        infinite: true,
+        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
         arrows: false,
         autoplay: true,
-        autoplayspeed: 3000
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true
+                }
+            }
+        ]
     });
 
     // toggle menu mobile
