@@ -1,15 +1,16 @@
 $(function () {
     // toggle du btn active
-    $('[data-filter-color]').click(function () {
+    $('.slider-section__toggle-cta').click(function () {
+
         var choosenColor = $(this).data('filter-color');
 
-        $('[data-filter-color]').each(function (e) {
+        $('.slider-section__toggle-cta').each(function (e) {
             $(this).removeClass('active');
         });
         $(this).addClass('active');
 
         //toggle des sliders
-        $('[data-slider]').each(function (e) {
+        $('.slider-section__slider-image').each(function (e) {
             if ($(this).data('slider') = choosenColor) {
                 $(this).addClass('active');
                 $(this).slick('setPosition');
@@ -17,9 +18,11 @@ $(function () {
                 $(this).removeClass('active');
             }
         });
-        return false;
+        // return false;
     });
 });
+
+
 
 $(document).ready(function () {
     // slider

@@ -4,15 +4,19 @@
         margin: 20px 0;
     }
     &__toggle-cta{
+        font: medium 15px/20px $title-font-familly;
+        background-color: $primary-color;
+        color: $white-color;
         list-style-type: none;
         display: inline-block;
-        background-color: $grey-color;
         border: 1px solid $black-color;
         border-radius: 5px;
         padding: 5px 10px;
         margin-right: 10px;
-        &.active{
+        &:hover, &.active{
             background-color: $white-color;
+            color: $grey-color;
+            cursor: pointer;
         }
     }
     &__slider-image{
