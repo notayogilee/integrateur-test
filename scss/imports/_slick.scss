@@ -26,7 +26,9 @@
         &__slider{
             display: none;
             &.selected{
-                display: block;
+                display: flex;
+                overflow: hidden;
+                height: 100%;
             }
         }
     }
