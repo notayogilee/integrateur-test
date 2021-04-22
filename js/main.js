@@ -24,9 +24,7 @@ $(function () {
 
     const setSlider = function () {
         // slider
-        let slideWrapper = $(".selected");
-
-        $(slideWrapper).slick({
+        $(".selected").slick({
             infinite: true,
             speed: 500,
             slidesToShow: 1,
