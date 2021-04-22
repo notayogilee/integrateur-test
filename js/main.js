@@ -50,14 +50,13 @@ $(function () {
 
     // toggle menu mobile
     $('[ data-mobile-menuburger-open]').click(function () {
-        $('.header-mobile__menu:first-child').css("display", "block");
-        $('.header-mobile__menu').slideDown("slow");
         $('.header-mobile').css("display", "none");
+        $('.header-mobile__menu:first-child').css("display", "block");
+        $('.header-mobile__menu').slideDown();
     });
 
     $('[ data-mobile-menuburger-close]').click(function () {
         $('.header-mobile__menu').slideUp();
-        // $('.header-mobile__menu').css("display", "none");
         $('.header-mobile').css("display", "block");
     });
 

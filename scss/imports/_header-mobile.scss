@@ -40,6 +40,16 @@
 
     &__nav{
         padding-top: 20px;
+
+        ul{
+            list-style-type: none;
+        }
+    }
+
+    &__link{
+       font: bold 15px/20px $body-font-familly;
+       color: $black-color;
+       display: block;
     }
 
     &__menu{
@@ -48,17 +58,30 @@
         padding: 20px;
         background-color: $white-color;
         display: none;
+        z-index: $satan;
     }
 
     &__infos{
+        &>a:first-child, &>span{
+            font: bold 15px/20px $body-font-familly;
+        }
         &>a{
             display: block;
+        }
+
+        &>p{
+            font: bold 20px/24px $title-font-familly;
         }
     }
     &__has-dropdown{
         display: block;
         width: 100%;
         position: relative;
+
+        &li>a{
+            font: medium 15px/20px $body-font-familly;
+            color: $black-color;
+        }
         .header-mobile__link{
             &:after{
                 position: absolute;
