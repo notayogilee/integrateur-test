@@ -1,7 +1,6 @@
 $(function () {
     // toggle du btn active
-    $('.slider-section__toggle-cta').click(function () {
-
+    $('.slider-section__toggle-cta').click(function (e) {
         var choosenColor = $(this).data('filter-color');
 
         $('.slider-section__toggle-cta').each(function (e) {
@@ -10,44 +9,46 @@ $(function () {
         $(this).addClass('active');
 
         //toggle des sliders
-        $('.slider-section__slider-image').each(function (e) {
-            if ($(this).data('slider') = choosenColor) {
-                $(this).addClass('active');
-                $(this).slick('setPosition');
+        $('.slider-section__slider').each(function (e) {
+
+            if ($(this).data('slider') === choosenColor) {
+                $(this).addClass('selected');
             } else {
-                $(this).removeClass('active');
+                $(this).removeClass('selected');
+                $('.slick-slider').slick('unslick');
             }
         });
-        // return false;
+        setSlider();
+        return false;
     });
-});
 
+    const setSlider = function () {
+        // slider
+        let slideWrapper = $(".selected");
 
-
-$(document).ready(function () {
-    // slider
-    // let slideWrapper = $("[data-slider]");
-
-    $('.selected').slick({
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    fade: true
+        $(slideWrapper).slick({
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        fade: true
+                    }
                 }
-            }
-        ]
-    });
+            ]
+        });
+    }
+
+    setSlider();
 
     // toggle menu mobile
     $('[ data-mobile-menuburger-open]').click(function () {
@@ -68,5 +69,5 @@ $(document).ready(function () {
             $(this).find('.header-mobile__link').addClass('header-mobile__link--opened');
         }
     });
-
+    return false;
 });
