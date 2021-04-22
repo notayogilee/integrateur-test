@@ -50,13 +50,15 @@ $(function () {
 
     // toggle menu mobile
     $('[ data-mobile-menuburger-open]').click(function () {
-        $('.header-mobile__menu').css("display", "block");
-        $(this).parent().attr("class", "header-mobile__menu")
-        console.log(this)
+        $('.header-mobile__menu:first-child').css("display", "block");
+        $('.header-mobile__menu').slideDown("slow");
+        $('.header-mobile').css("display", "none");
     });
 
     $('[ data-mobile-menuburger-close]').click(function () {
-        $('.header-mobile__menu').css("display", "none");
+        $('.header-mobile__menu').slideUp();
+        // $('.header-mobile__menu').css("display", "none");
+        $('.header-mobile').css("display", "block");
     });
 
     // toggle le sous menu
@@ -69,5 +71,4 @@ $(function () {
             $(this).find('.header-mobile__link').addClass('header-mobile__link--opened');
         }
     });
-    return false;
 });
