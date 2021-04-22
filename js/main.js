@@ -51,6 +51,8 @@ $(function () {
     // toggle menu mobile
     $('[ data-mobile-menuburger-open]').click(function () {
         $('.header-mobile__menu').css("display", "block");
+        $(this).parent().attr("class", "header-mobile__menu")
+        console.log(this)
     });
 
     $('[ data-mobile-menuburger-close]').click(function () {
