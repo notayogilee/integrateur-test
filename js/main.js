@@ -49,17 +49,15 @@ $(function () {
     setSlider();
 
     // toggle menu mobile
-    $('[ data-mobile-menuburger-open]').click(function () {
-        $('.header-mobile__burger').css("display", "none");
-        $('.header-mobile__close').css("display", "block")
-        $('.header-mobile__menu').slideDown();
-    });
 
-    $('.header-mobile__close').click(function () {
-        $('.header-mobile__menu').slideUp();
-        $('.header-mobile__burger').css("display", "block");
-        $('.header-mobile__close').css("display", "none");
-    });
+    $('[data-mobile-menuburger-toggler]').click(function () {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.header-mobile__menu').slideDown();
+        } else {
+            $('.header-mobile__menu').slideUp();
+        }
+    })
 
     // toggle le sous menu
     $('[ data-menu-dropdown]').click(function () {
