@@ -26,6 +26,7 @@
 
     &__close{
         text-decoration: none;
+        display: none;
     }
 
     &__close-x{
@@ -53,6 +54,7 @@
     }
 
     &__menu{
+        top:60px;
         width: 100%;
         position: fixed;
         padding: 20px;
