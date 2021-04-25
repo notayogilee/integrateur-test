@@ -96,9 +96,10 @@
         width: 100%;
         position: relative;
 
-        &li>a{
-            font: medium 15px/20px $body-font-familly;
+        ul li a{
+            font: 500 15px/20px $body-font-familly;
             color: $black-color;
+            margin-left: 20px;
         }
         .header-mobile__link{
             &:after{
