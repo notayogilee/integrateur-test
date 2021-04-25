@@ -35,7 +35,7 @@
         } 
         &.active .line-3{
             position: absolute;
-          top:10px;
+            top:10px;
             transform: rotate(-45deg);
         }
     }
@@ -61,34 +61,55 @@
         ul{
             list-style-type: none;
         }
+
     }
 
     &__link{
        font: bold 15px/20px $body-font-familly;
        color: $black-color;
        display: block;
+       padding: 20px;
+       border-bottom: 1px solid $black-color;
     }
 
     &__menu{
         top:60px;
         width: 100%;
         position: fixed;
-        padding: 20px;
+  
+        padding: 0;
         background-color: $white-color;
         display: none;
         z-index: $satan;
     }
 
     &__infos{
-        &>a:first-child, &>span{
-            font: bold 15px/20px $body-font-familly;
-        }
-        &>a{
+        p, span{
+            padding: 0 20px;
             display: block;
         }
 
-        &>p{
+        a:first-child, span{
+            font: bold 15px/20px $body-font-familly;
+        }
+
+        a{
+            padding: 10px 20px;
+        }
+
+        p{
             font: bold 20px/24px $title-font-familly;
+            padding-top: 20px;
+        }
+
+        span > a {
+            padding: 5px;
+        }
+
+        a.btn-primary{
+            padding: 20px;
+            margin: 20px 20px 40px 20px;
+            display: inline-block;
         }
     }
     &__has-dropdown{
@@ -96,18 +117,29 @@
         width: 100%;
         position: relative;
 
-        ul li a{
-            font: 500 15px/20px $body-font-familly;
-            color: $black-color;
-            margin-left: 20px;
+        & a {
+            color: $primary-color;
         }
+
+        ul {
+
+            li {
+                padding: 20px;
+                a{
+                    font: 500 15px/20px $body-font-familly;
+                    color: $black-color;
+                    margin-left: 20px;
+                }
+            } 
+        }
+       
         .header-mobile__link{
             &:after{
                 position: absolute;
                 content: '+';
                 display: block;
-                right: 0;
-                top: 0;
+                right: 20px;
+                top: 20px;
                 font-size: 30px;
                 font-weight: bold;
                 color: $primary-color;
@@ -116,6 +148,8 @@
                 &:after{
                     content: '-';
                 }
+
+                // border-bottom: 1px solid $black-color;
             }
         }
 

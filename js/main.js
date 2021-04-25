@@ -59,7 +59,6 @@ $(function () {
             // ferme dropdown si ouvert
             $('.dropdown').slideUp();
             $('.header-mobile__link').removeClass('header-mobile__link--opened');
-
         }
     })
 
@@ -69,18 +68,14 @@ $(function () {
         if ($(this).hasClass('active')) {
             $('.dropdown').slideDown();
             $(this).find('.dropdown').addClass('dropdown--opened');
-            $(this).find('.header-mobile__link').addClass('header-mobile__link--opened');
+            $(this).find('.header-mobile__link').addClass('header-mobile__link--opened')
+            $('.financement').css({ 'border-top': '1px solid #000' });
+
         } else {
             $('.dropdown').slideUp();
             $(this).find('.dropdown').removeClass('dropdown--opened');
             $(this).find('.header-mobile__link').removeClass('header-mobile__link--opened');
+            $('.financement').css({ 'border-top': 'none' });
         }
-        // if ($(this).find('.dropdown').hasClass('dropdown--opened')) {
-        //     $(this).find('.dropdown').removeClass('dropdown--opened');
-        //     $(this).find('.header-mobile__link').removeClass('header-mobile__link--opened');
-        // } else {
-        //     $(this).find('.dropdown').addClass('dropdown--opened');
-        //     $(this).find('.header-mobile__link').addClass('header-mobile__link--opened');
-        // }
     });
 });
