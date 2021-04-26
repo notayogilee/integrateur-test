@@ -13,10 +13,12 @@
         border-radius: 5px;
         padding: 5px 10px;
         margin-right: 10px;
+        transition: all 0.300s ease-in-out;
         &:hover, &.active{
             background-color: $white-color;
             color: $grey-color;
             cursor: pointer;
+            transition: all 0.300s ease-in-out;
         }
     }
     &__slider-image{

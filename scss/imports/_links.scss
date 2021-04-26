@@ -9,8 +9,10 @@ a {
 .link-primary{
  font: bold 15px/20px $body-font-familly;
  color: $primary-color;
+ transition: all 0.300s ease-in-out;
  &:hover{
    text-decoration: underline;
+   transition: all 0.300s ease-in-out;
  }
 }
 
@@ -21,7 +23,9 @@ a {
   padding: 20px;
   border-radius: 5px;
   display: inline-block;
+  transition: all 0.300s ease-in-out;
   &:hover{
     background-color: $grey-color;
+    transition: all 0.300s ease-in-out;
   }
 }
