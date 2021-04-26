@@ -1,6 +1,11 @@
 body{
     font-family: $body-font-familly;
-    background: $background-color;
+    background: linear-gradient(to bottom, 
+    $white-color 128px, 
+    $grey-color 128px, 
+    $grey-color 168px, 
+    $background-color 168px,
+    $background-color calc(100vh - 168px));
     font-size: 15px;
     line-height: 20px;
 }
@@ -19,6 +24,7 @@ section{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .mainContent{
