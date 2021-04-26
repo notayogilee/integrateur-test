@@ -49,33 +49,43 @@ $(function () {
     setSlider();
 
     // toggle menu mobile
-
     $('[data-mobile-menuburger-toggler]').click(function () {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
             $('.header-mobile__menu').slideDown();
         } else {
             $('.header-mobile__menu').slideUp();
-            // ferme dropdown si ouvert
+            // ferme dropdown si ouvert et enleve tous les class ajoute
             $('.dropdown').slideUp();
             $('.header-mobile__link').removeClass('header-mobile__link--opened');
+            $('.dropdown-item').removeClass('active');
+            $('[data-menu-dropdown]').parent().find('.dropdown').removeClass('dropdown--opened');
+            $('.header-mobile__has-dropdown').removeClass('active');
+            $('.financement').css({ 'border-top': 'none' });
         }
     })
 
     // toggle le sous menu
     $('[ data-menu-dropdown]').click(function () {
-        $(this).toggleClass('active');
-        if ($(this).hasClass('active')) {
+        $(this).parent().toggleClass('active');
+        if ($(this).parent().hasClass('active')) {
             $('.dropdown').slideDown();
-            $(this).find('.dropdown').addClass('dropdown--opened');
-            $(this).find('.header-mobile__link').addClass('header-mobile__link--opened')
+            $(this).parent().find('.dropdown').addClass('dropdown--opened');
+            $(this).addClass('header-mobile__link--opened')
             $('.financement').css({ 'border-top': '1px solid #000' });
 
         } else {
             $('.dropdown').slideUp();
-            $(this).find('.dropdown').removeClass('dropdown--opened');
-            $(this).find('.header-mobile__link').removeClass('header-mobile__link--opened');
+            $('[data-menu-dropdown]').parent().find('.dropdown').removeClass('dropdown--opened');
+            $('[data-menu-dropdown]').removeClass('header-mobile__link--opened');
             $('.financement').css({ 'border-top': 'none' });
+            $('.dropdown-item').removeClass('active');
         }
     });
+
+    // onclick links
+    $('.dropdown-item').click(function () {
+        $('.dropdown-item').removeClass('active');
+        $(this).addClass('active');
+    })
 });
