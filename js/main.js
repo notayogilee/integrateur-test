@@ -87,5 +87,16 @@ $(function () {
     $('.dropdown-item').click(function () {
         $('.dropdown-item').removeClass('active');
         $(this).addClass('active');
+    });
+
+    // desktop
+    $('[data-desktop-dropdown]').click(function () {
+        if ($(this).find('.desktop-dropdown').hasClass('active')) {
+            $(this).find('.desktop-dropdown').slideUp();
+            $(this).find('.desktop-dropdown').removeClass('active');
+        } else {
+            $(this).find('.desktop-dropdown').slideDown();
+            $(this).find('.desktop-dropdown').addClass('active');
+        }
     })
 });

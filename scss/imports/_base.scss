@@ -1,11 +1,6 @@
 body{
     font-family: $body-font-familly;
-    background: linear-gradient(to bottom, 
-    $white-color 128px, 
-    $grey-color 128px, 
-    $grey-color 168px, 
-    $background-color 168px,
-    $background-color calc(100vh - 168px));
+    background: $background-color;
     font-size: 15px;
     line-height: 20px;
 }
@@ -39,4 +34,15 @@ section{
     display: table;
     clear: both;
   }
+}
+
+@media only screen and (min-width: 767px) {
+ body {
+  background: linear-gradient(to bottom, 
+  $white-color 128px, 
+  $grey-color 128px, 
+  $grey-color 168px, 
+  $background-color 168px,
+  $background-color calc(100vh - 168px));
+ } 
 }
