@@ -1,0 +1,25 @@
+footer {
+ width: 100vw;
+ margin-left: 50%;
+ transform: translateX(-50%);
+ background-color: $menu-bgcolor;
+ height: 168px;
+
+ div {
+   display: flex;
+   justify-content: center;
+   padding-top: 78px;
+
+  
+
+   a {
+     margin-left: 100px;
+     font: bold 15px/20px $body-font-familly;
+
+     .devicon{
+       color: $primary-color;
+       font-size: 3rem;
+     }
+   }
+ }
+}

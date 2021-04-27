@@ -94,9 +94,11 @@ $(function () {
         if ($(this).find('.desktop-dropdown').hasClass('active')) {
             $(this).find('.desktop-dropdown').slideUp();
             $(this).find('.desktop-dropdown').removeClass('active');
+            $(this).find('>:first-child').removeAttr('style');
         } else {
             $(this).find('.desktop-dropdown').slideDown();
             $(this).find('.desktop-dropdown').addClass('active');
+            $(this).find('>:first-child').css({ 'color': '#47C671 ' });
         }
     })
 });

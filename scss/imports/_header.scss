@@ -89,17 +89,14 @@
                         display: none;
     
                         &.active {
-                            
+                            background-color: transparent;
                             max-height: 40px;
-                            // padding: 20px;
                            
                             li {
-                              
                                background-color: $white-color;
-                              
                                
                                a{
-                                   color: $grey-color;
+                                  color: $grey-color;
                                   padding: 10px 20px;
                                   width: 100%;
                                   display: block;
