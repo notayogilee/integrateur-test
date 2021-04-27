@@ -68,7 +68,7 @@
        font: bold 15px/20px $body-font-familly;
        color: $black-color;
        display: block;
-       padding: 20px;
+       padding: 10px;
        border-bottom: 1px solid $black-color;
     }
 
@@ -124,7 +124,7 @@
         ul {
 
             li {
-                padding: 20px;
+                padding: 10px;
                 a{
                     font: 500 15px/20px $body-font-familly;
                     color: $black-color;
@@ -139,7 +139,7 @@
                 content: '+';
                 display: block;
                 right: 20px;
-                top: 20px;
+                top: 10px;
                 font-size: 30px;
                 font-weight: bold;
                 color: $primary-color;

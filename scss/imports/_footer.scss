@@ -3,22 +3,24 @@ footer {
  margin-left: 50%;
  transform: translateX(-50%);
  background-color: $menu-bgcolor;
- height: 168px;
+ height: 200px;
 
  div {
    display: flex;
    justify-content: center;
-   padding-top: 78px;
-
-  
+   padding-top: 80px;
 
    a {
-     margin-left: 100px;
-     font: bold 15px/20px $body-font-familly;
+     margin: 0 5vw;
 
      .devicon{
        color: $primary-color;
-       font-size: 3rem;
+       font-size: 4rem;
+       transition: all .300s ease-in-out;
+
+       &:hover {
+         color: $grey-color;
+       }
      }
    }
  }
