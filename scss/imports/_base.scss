@@ -23,7 +23,8 @@ section{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-
+  
+ 
 }
 
 .mainContent{
@@ -38,15 +39,4 @@ section{
     display: table;
     clear: both;
   }
-}
-
-@media only screen and (min-width: 767px) {
- body {
-  background: linear-gradient(to bottom, 
-  $menu-bgcolor 128px, 
-  $grey-color 128px, 
-  $grey-color 168px,
-  $background-color 168px,
-  $background-color calc(100vh - 168px));
- } 
 }
